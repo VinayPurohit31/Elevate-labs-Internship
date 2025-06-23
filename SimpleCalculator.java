@@ -4,12 +4,24 @@ import java.util.Scanner;
 class SimpleCalculator {
 
     public static void main(String[] args) {
-        Calculotorfunction Cf = new Calculotorfunction();
-        Scanner sc = new Scanner(System.in);
+        LogicHandeling LG=new LogicHandeling();
+        System.out.println("------------------Calculator Menu------------------");
+        LG.loopLogic();
+    }
+
+}
+
+class LogicHandeling {
+
+    Calculotorfunction Cf = new Calculotorfunction();
+    Scanner sc = new Scanner(System.in);
+
+    void loopLogic() {
+
         try {
 
             for (;;) {
-                System.out.println("------------------Calculator Menu------------------");
+                
                 System.out.println("Enter the no for which operation you want to perform ");
                 System.out.println("         1 if you want to add two no ");
                 System.out.println("         2 if you want to sub two no ");
@@ -55,11 +67,6 @@ class SimpleCalculator {
         sc.close();
 
     }
-
-    public void ExecuteLogic() {
-
-    }
-
 }
 
 class Calculotorfunction {
