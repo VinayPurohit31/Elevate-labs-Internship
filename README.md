@@ -1,4 +1,4 @@
-# Simple Java Calculator 🧮
+# Simple Java Calculator 
 
 This repo contains two basic Java calculator programs built to practice OOP concepts, user input handling, and file operations in Java.
 
