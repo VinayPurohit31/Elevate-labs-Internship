@@ -126,7 +126,7 @@ class Calculotorfunction {
             System.out.println("");
         } else {
             System.out.println("Divide by 0 gives an Arathmatis Exception ");
-            History.add("Devision of " + a + " and " + b + " is nothing because divide by 0 is an exception ");
+            History.add("Devision of " + a + " and " + b + " failed: Division by zero.");
             System.out.println("");
         }
 
