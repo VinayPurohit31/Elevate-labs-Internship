@@ -1,0 +1,2 @@
+Addition of 2000.0 and 393.0 is 2393.0
+Substraction of 2000.0 and 1000.0 is 1000.0

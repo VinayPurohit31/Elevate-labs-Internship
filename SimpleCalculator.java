@@ -1,4 +1,6 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,17 +32,22 @@ class LogicHandeling {
                 System.out.println("         3 if you want to dev two no ");
                 System.out.println("         4 if you want to mul two no ");
                 System.out.println("         5 if you want to view the History  ");
-                System.out.println("         6 if you want to terminate the program");
+                System.out.println("         6 if you want to generate a .txt file of history");
+                System.out.println("         7 if you want to terminate the program");
                 System.out.print("         Enter the no :- ");
                 int selectCase = sc.nextInt();
                 System.out.println("");
-                if (selectCase == 6) {
+                if (selectCase == 7) {
                     System.out.println("       You terminated the session.");
                     System.out.println("");
                     break;
                 }
                 if (selectCase == 5) {
                     Cf.history();
+                    continue;
+                }
+                if (selectCase == 6) {
+                    Cf.generatHistoryTxt();
                     continue;
                 }
                 if (selectCase >= 1 && selectCase <= 4) {
@@ -119,6 +126,7 @@ class Calculotorfunction {
             System.out.println("");
         } else {
             System.out.println("Divide by 0 gives an Arathmatis Exception ");
+            History.add("Devision of " + a + " and " + b + " is nothing because divide by 0 is an exception ");
             System.out.println("");
         }
 
@@ -135,8 +143,23 @@ class Calculotorfunction {
 
     void history() {
         System.out.println("---------History of your records--------- ");
+        int count = 1;
         for (String elem : History) {
-            System.out.println(elem);
+            System.out.println(count++ + " " + elem);
         }
+    }
+
+    void generatHistoryTxt() throws IOException {
+        FileWriter HistoryToTxt = new FileWriter("historyOfCalculator.txt");
+        int size=History.size();
+        for(int i=0;i<size;i++){
+            String str=History.get(i);
+            HistoryToTxt.write(str);
+            if(i< size-1){
+                HistoryToTxt.write("\n");
+            }
+        }
+        System.out.println("The file has been generated with the name historyOfCalculator.txt ");
+        HistoryToTxt.close();
     }
 }
