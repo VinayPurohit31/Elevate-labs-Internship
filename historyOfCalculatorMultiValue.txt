@@ -1,2 +1,2 @@
-Multiplication of [1.0, 2.0, 3.0, 4.0, 5.0] is 120.0
-Substraction of [1.0, 2.0, 3.0, 4.0, 5.0, 100.0, 20.0, 30.0, 10.0] is -175.0
+Addition of [20.0, 30.0, 40.0] is 90.0
+Subtraction of [100.0, 50.0, 30.0] is 20.0

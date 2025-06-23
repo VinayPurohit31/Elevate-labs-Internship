@@ -1,1 +1,2 @@
-Addition of [1.0, 2.0, 3.0, 4.0] is 10.0
+Addition of 200.0 and 300.0 is 500.0
+Division of 100.0 and 30.0 is 3.3333333333333335
